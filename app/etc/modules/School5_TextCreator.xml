@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+  <modules>
+    <School5_TextCreator>
+      <active>true</active>
+      <codePool>local</codePool>
+    </School5_TextCreator>
+  </modules>
+</config>

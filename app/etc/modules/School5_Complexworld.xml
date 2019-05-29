@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+  <modules>
+    <School5_Complexworld>
+      <active>true</active>
+      <codePool>local</codePool>
+    </School5_Complexworld>
+  </modules>
+</config>
