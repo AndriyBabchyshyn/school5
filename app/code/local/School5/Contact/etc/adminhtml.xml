@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <helloworld>
+            <children>
+                <School5_contact>
+                    <title>Contact</title>
+                    <sort_order>400</sort_order>
+
+                    <action>adminhtml/message/index</action>
+                </School5_contact>
+            </children>
+        </helloworld>
+    </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <helloworld>
+                        <children>
+                            <School5_contact>
+                                <title>Contact</title>
+                            </School5_contact>
+                        </children>
+                    </helloworld>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,30 @@
+<config>
+    <modules>
+        <School5_widget>
+            <version>1.0.0</version>
+        </School5_widget>
+    </modules>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <widget before="Mage_Adminhtml">World_widget_Adminhtml</widget>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <global>
+        <blocks>
+            <widget>
+                <class>School5_widget_Block</class>
+            </widget>
+        </blocks>
+        <helpers>
+            <widget>
+                <class>School5_widget_Helper</class>
+            </widget>
+        </helpers>
+    </global>
+</config>

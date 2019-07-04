@@ -1,0 +1,36 @@
+<?php
+
+class School5_Contact_Block_Adminhtml_Message_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
+{
+    /**
+     * School5_Contact_Block_Adminhtml_Message_Edit constructor.
+     * @throws Exception
+     */
+    public function __construct()
+    {
+        $this->_objectId = 'id';
+        $this->_blockGroup = 'contact';
+        $this->_controller = 'adminhtml_message';
+        parent::__construct();
+        $this->_updateButton('save', 'label', $this->__('Save Message'));
+        $this->_updateButton('delete', 'label', $this->__('Delete Message'));
+        $this->addButton('send_notification', array(
+            'label' => Mage::helper('sales')->__('Send Email'),
+            'onclick' => "location.href='" .
+                $this->getUrl('*/*/send/id/' . $this->getRequest()->getParam('id')) . "'",
+        ));
+    }
+    /**
+     * Get Header text
+     *
+     * @return string
+     */
+    public function getHeaderText()
+    {
+        if (Mage::registry('email')->getId()) {
+            return $this->__('Edit Post');
+        } else {
+            return $this->__('New Post');
+        }
+    }
+}
